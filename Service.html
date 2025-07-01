@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+ <style>
+        
+        .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .dropdown-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .dropdown-menu::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        @keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Move half the total width of the duplicated content */
+    }
+}
+
+/* Apply the animation to the element with .animate-marquee */
+.animate-marquee {
+    animation: marquee 30s linear infinite; /* Adjust time for speed */
+}
+
+  /* Custom slow spin animation */
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+    }
+    
+    /* Existing marquee animation */
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
+    }
+
+    @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+    </style>
+
+
+</head>
+<body class="font-sans">
+    <header class="bg-white md:fixed md:top-0 md:left-0 md:right-0 md:z-50">
+
+    <nav class="container max-w-7xl py-6 px-4 mx-auto flex justify-between items-center md:px-0">
+        <a href="#" class="flex items-center text-xl font-bold text-gray-900">
+            <img src="image/logo-dark.bc42d68d.svg" alt="Sofax Logo" class="h-auto" style="width: 100px;">
+        </a>
+
+        <ul class="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <li class="relative group">
+                <a href="#" class="inline-flex items-center space-x-1 text-gray-800">
+                    <span class="text-[18px]">Demos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform group-hover:-rotate-180 transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="absolute left-0 top-[40px] hidden group-hover:block bg-white shadow-lg rounded-md z-20">
+                    <ul class="min-w-[150px] py-2">
+                        <li><a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">MultiPage
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">OnePage
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="absolute w-full h-[16px] top-[24px] pointer-events-auto z-10 hidden md:block"></div>
+            </li>
+            <li><a href="#" class="text-gray-800 text-[18px]">About Us</a></li>
+            <li class="relative group">
+                <a href="#" class="inline-flex items-center space-x-1 text-gray-800">
+                    <span class="text-[18px]">Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform group-hover:-rotate-180 transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="absolute left-0 top-[40px] hidden group-hover:block bg-white shadow-lg rounded-md z-20">
+                    <ul class="min-w-[150px] py-2">
+                        <li class="relative group">
+                            <a href="#" class="relative inline-block px-4 py-2 text-[15px] font-medium before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[3px] before:bg-current before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-[18%]">About Us</a>
+                            <a href="#" class="relative inline-block px-4 py-2 text-[15px] font-medium before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[3px] before:bg-current before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-[20%]">Pricing</a>
+                            <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Blog
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Services
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Team
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Career
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Portfolio
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Utility
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                        <li> <a href="#" class="flex justify-between items-center px-4 py-2 text-[15px]">Account
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform -rotate-90 hover:-rotate-180">
+                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4-24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="absolute w-full h-[16px] top-[24px] pointer-events-auto z-10 hidden md:block"></div>
+            </li>
+            <li class="relative group">
+                <a href="#" class="inline-flex items-center space-x-1 text-gray-800">
+                    <span class="text-[18px]">Blog</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform group-hover:-rotate-180 transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="absolute left-0 top-[40px] hidden group-hover:block bg-white shadow-lg rounded-md z-20">
+                    <ul class="min-w-[150px] py-2">
+                        <li> <a href="#" class="relative inline-block px-4 py-2 text-[15px] font-medium before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[3px] before:bg-current before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-[15%]">Our Blog</a></li>
+                        <li><a href="#" class="relative inline-block px-4 py-2 text-[15px] font-medium before:absolute before:left-0 before:bottom-[4px] before:w-0 before:h-[3px] before:bg-current before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-[15%]">Blog Details</a></li>
+                    </ul>
+                </div>
+                <div class="absolute w-full h-[16px] top-[24px] pointer-events-auto z-10 hidden md:block"></div>
+            </li>
+            <li><a href="#" class="text-gray-800 text-[18px]">Contact Us</a></li>
+        </ul>
+
+        <div class="hidden md:block relative inline-block overflow-hidden bg-[#E5ABF3] text-black font-semibold px-6 py-3 rounded-full cursor-pointer group select-none ml-10" style="width:130px; text-align:center;">
+            <span class="block transition-transform duration-700 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 group-hover:pointer-events-none">
+                Get started
+            </span>
+            <span class="absolute inset-0 flex items-center justify-center transform translate-y-full opacity-0 transition-all duration-700 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                Get started
+            </span>
+        </div>
+
+        <div class="toggle-button block md:hidden cursor-pointer">
+            <i class="fa-solid fa-bars fa-2x text-gray-700 hover:text-gray-900"></i>
+        </div>
+    </nav>
+
+    <div class="dropdown-menu fixed top-0 right-0 w-64 h-screen bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-6 md:hidden overflow-y-auto overscroll-contain">
+        <div class="flex items-center justify-between px-0 py-4 border-b border-gray-200">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-gray-900 sm:hidden">SOFAX</span>
+            </div>
+            <button class="text-gray-600 hover:text-gray-800 toggle-button z-50">
+                <i class="fa-solid fa-times fa-2x"></i>
+            </button>
+        </div>
+
+        <ul class="flex flex-col space-y-0 mt-8 w-full">
+            <li class="w-full border-b border-gray-200">
+                <a href="#" class="inline-flex items-center justify-between w-full text-[18px] text-gray-800 hover:text-blue-600 py-3 pr-4 mobile-dropdown-trigger">
+                    <span>Demos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="mobile-submenu bg-gray-50 rounded-md mt-2 w-full py-2 pl-4 pr-2 hidden">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">MultiPage</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">OnePage</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="w-full border-b border-gray-200">
+                <a href="#" class="text-[18px] text-gray-800 hover:text-blue-600 py-3 block pr-4">About Us</a>
+            </li>
+            <li class="w-full border-b border-gray-200">
+                <a href="#" class="inline-flex items-center justify-between w-full text-[18px] text-gray-800 hover:text-blue-600 py-3 pr-4 mobile-dropdown-trigger">
+                    <span>Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="mobile-submenu bg-gray-50 rounded-md mt-2 w-full py-2 pl-4 pr-2 hidden">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Pricing</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Services</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Team</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Career</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Portfolio</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Utility</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Account</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="w-full border-b border-gray-200">
+                <a href="#" class="inline-flex items-center justify-between w-full text-[18px] text-gray-800 hover:text-blue-600 py-3 pr-4 mobile-dropdown-trigger">
+                    <span>Blog</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" class="arrow-down-icon transform transition-transform duration-200 ml-1">
+                        <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+                    </svg>
+                </a>
+                <div class="mobile-submenu bg-gray-50 rounded-md mt-2 w-full py-2 pl-4 pr-2 hidden">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Blog Details</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="w-full border-b border-gray-200">
+                <a href="#" class="text-[18px] text-gray-800 hover:text-blue-600 py-3 block pr-4">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+ <div class=" w-full bg-black pt-[200px] pb-[100px]">
+
+    <h1 class="text-[40px] sm:text-[120px] font-bold  text-center text-white"> Service </h1>
+    <a href="index.html">
+        <p class="text-center  text-[20px] text-white pb-[60px] ">Home > <span class="text-[#E5ABF3]"> Service </span></p>
+    </a>
+
+ </div>
+
+ <section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center mb-16">
+    <h2 class="text-4 md:text-[75px] font-bold text-gray-900 leading-tight sm:mt-20">
+      We provide all<br class="hidden md:block" /> effective services
+    </h2>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-12">
+    <!-- Service Card (repeat this block for each service) -->
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">User Interface/Experience</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          UI & UX are crucial aspects of design<br />
+          digital products & services. UI refers to<br />
+          the visual elements that users.
+        </p>
+      </div>
+      <img
+        src="image/image1 (1).webp"
+        alt="UI/UX"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+    <!-- Add your other cards here using the same pattern... -->
+    
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">Search Engine Optimization</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          The goal of SEO to increase organic<br />
+          (non-paid) traffic website by ranking<br />
+          higher in search engine results.
+        </p>
+      </div>
+      <img
+        src="image/image2 (1).webp"
+        alt="SEO"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+    <!-- Performance Management -->
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">Performance Management</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          Process designed to continuously is a<br />
+          monitor measure & enhance the<br />
+          performance of individuals.
+        </p>
+      </div>
+      <img
+        src="image/image3 (1).webp"
+        alt="Performance"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+    <!-- Leadership Development -->
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">Leadership Development</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          The process of the enhancing abilities<br />
+          skill and qualities of the individuals to<br />
+          become effective to leaders.
+        </p>
+      </div>
+      <img
+        src="image/image4 (1).webp"
+        alt="Leadership"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+    <!-- Training & Development -->
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">Training & Development</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          Involves assessing the skills required<br />
+          for various roles the organization and<br />
+          identifying gaps between current.
+        </p>
+      </div>
+      <img
+        src="image/image5 (1).webp"
+        alt="Training"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+    <!-- Resource Allocation -->
+    <div class="p-4 rounded-xl transition duration-300 sm:flex sm:items-start md:gap-8">
+      <div class="space-y-3">
+        <h3 class="text-[24px] font-bold text-black">Resource Allocation</h3>
+        <p class="text-[20px] text-gray-700 leading-relaxed">
+          Assessing requirements of projects to<br />
+          initiatives or operational activities or<br />
+          determine the types & quantities.
+        </p>
+      </div>
+      <img
+        src="image/image6 (1).webp"
+        alt="Resource"
+        class="w-40 h-auto mt-6 mx-auto sm:mt-0 sm:ml-auto"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class=" bg-black py-10 sm:py-16  overflow-hidden sm:mt-[100px]">
+    <div class="relative w-full ">
+        <div class="whitespace-nowrap animate-marquee flex items-center">
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] sm:text-[75px] font-bold leading-none">Start Up Business</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] sm:text-[75px] font-bold leading-none">Digital Marketing Agency</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] sm:text-[75px] font-bold leading-none">Social Media Marketing</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] sm:text-[75px] font-bold leading-none">Start Up Business</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] sm:text-[75px] font-bold leading-none">Digital Marketing Agency</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+
+            <div class="inline-flex items-center gap-[35px] px-10">
+                <h2 class="text-white text-[36px] text-[75px] font-bold leading-none">Social Media Marketing</h2>
+                <img src="image/icon1.png" alt="Icon 1" class="w-auto h-[50px] max-h-[50px] animate-spin-slow">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+ 
+<section class="bg-white  py-20 px-6 sm:mt-10 sm:mb-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+    <!-- Right Image on desktop, Top on mobile -->
+    <div class="flex flex-col order-1 md:order-2">
+      <img
+        src="image/service-thumb.webp"
+        alt="Team Meeting"
+        class="rounded-xl shadow-xl object-cover w-full mb-8 md:mb-0"
+      />
+      <!-- Floating Dots/Lines visible ≥sm -->
+      <div class="absolute -top-[100px] right-0 hidden sm:block">
+        <img src="image/shape2 (3).webp" alt="">
+      </div>
+    </div>
+
+    <!-- Left Content -->
+    <div class="space-y-8 flex flex-col order-2 md:order-1">
+      <h2
+        class="two-line font-bold text-gray-800 overflow-wrap-break-word"
+        style="font-size: clamp(36px, 8vw, 75px); line-height: 1.1;"
+      >
+        Strategy takes your<span class="desktop-br"><br></span><wbr>
+        business to the next level.
+      </h2>
+
+      <p class="text-gray-700 text-[18px]">
+        Experience unparalleled business progress with Sofax. Our expert team in
+        leveraging cutting‑edge digital strategies to propel your brand forward.
+      </p>
+
+      <!-- Features -->
+      <div class="flex items-start space-x-4">
+        <div class="flex items-center justify-center rounded-full bg-yellow-400">
+          <img src="image/icon2 (2).webp" alt="Globe Icon" class="w-full h-auto rounded-full">
+        </div>
+        <div>
+          <h3 class="text-[24px] font-bold text-black">
+            Multiply global marketing business to strategy
+          </h3>
+          <p class="text-gray-700 text-[18px]">
+            Conducting thorough markets research and analysis understand local market dynamics consumer.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-4">
+        <div class="flex items-center justify-center rounded-full bg-yellow-400">
+          <img src="image/icon3 (3).webp" alt="User Icon" class="w-full h-auto">
+        </div>
+        <div>
+          <h3 class="text-[24px] font-bold text-black">
+            Outstanding social media marketing business
+          </h3>
+          <p class="text-gray-700 text-[18px]">
+            Produces high‑quality relevant & engaging content tailored each social media platform & audience.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start space-x-4">
+        <div class="flex items-center justify-center rounded-full bg-yellow-400">
+          <img src="image/icon3 (3).webp" alt="User Icon" class="w-full h-auto">
+        </div>
+        <div>
+          <h3 class="text-[24px] font-bold text-black">
+            Customizable workflow
+          </h3>
+          <p class="text-gray-700 text-[18px]">
+            Produces high‑quality relevant & engaging content tailored each social media platform & audience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+
+
+ <section class=" bg-[#f9f9fa] py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-[36px] md:text-[75px] font-bold text-gray-900 leading-tight sm:mt-10">
+        If you want to know<br />anything asked us
+      </h2>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+      <div id="faq-left" class="flex-1 flex flex-col gap-6"></div>
+      <div id="faq-right" class="flex-1 flex flex-col gap-6"></div>
+    </div>
+
+    <!-- Scroll to top button -->
+  
+  </section>
+
+ 
+
+
+
+
+
+
+ <section class="relative bg-white px-6 py-24 overflow-hidden">
+
+  <div class="absolute top-5 -left-[100px] w-[200px] h-[200px]">
+    <img src="image/shape5.webp" alt="Corner Shape" class="w-full h-full object-contain rotate-30 hidden sm:block" />
+  </div>
+
+  <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between md:items-center">
+    <div class="flex flex-col items-center text-center gap-4 md:flex-row md:items-baseline md:text-left">
+      <h1 class="text-[36px] lg:text-[75px] font-bold text-black leading-tight top-5 left-5">
+        Let's embark on a<br />
+        digital journey<br />
+        together!
+      </h1>
+
+      <span class="inline-block w-[50px] lg:w-[70px] animate-spin-slow origin-center">
+        <img src="image/shape1 (1).webp" alt="Asterisk" class="w-full h-auto hidden sm:block" />
+      </span>
+    </div>
+
+    <div class="shrink-0">
+      <button class="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transform -rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+ <div class=" max-w-7xl mx-auto border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-center items-center  text-gray-500 text-sm">
+                
+                
+            </div>
+  
+</section>
+
+ <footer class="bg-white sm:pt-20 sm:pb-10 px-6 max-w-7xl mx-auto ">
+  <div class=" grid grid-cols-1 md:grid-cols-4 gap-10">
+  
+    <div>
+      <div class="flex items-center mb-4">
+        <img src="image/logo-dark.bc42d68d.svg" alt="Sofax Logo" class="w-90 h-auto object-contain mr-2">
+        
+      </div>
+      <p class="text-gray-600 leading-relaxed">
+        Sofax has many plans for the future to<br>
+        work with great clients and continue to<br>
+        work with agencies.
+      </p>
+      <div class="flex space-x-4 mt-6">
+        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black hover:bg-[#E5ABF3]">
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M9.96447 7.24539L16.1975 0H14.7205L9.30833 6.29107L4.98567 0H0L6.5367 9.51321L0 17.1111H1.47711L7.19246 10.4675L11.7575 17.1111H16.7432L9.9641 7.24539H9.96447ZM7.94136 9.59702L7.27906 8.64972L2.00933 1.11194H4.27809L8.53082 7.19517L9.19312 8.14247L14.7212 16.0497H12.4524L7.94136 9.59739V9.59702Z" fill="#0E0E0E"></path>
+  </svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black hover:bg-[#E5ABF3]">
+         <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M9.88663 0.00357362L7.65153 0C5.14046 0 3.5177 1.65905 3.5177 4.22688V6.17575H1.27039C1.0762 6.17575 0.918945 6.33263 0.918945 6.52614V9.34984C0.918945 9.54335 1.07638 9.70005 1.27039 9.70005H3.5177V16.8251C3.5177 17.0187 3.67495 17.1754 3.86914 17.1754H6.80123C6.99543 17.1754 7.15268 17.0185 7.15268 16.8251V9.70005H9.7803C9.9745 9.70005 10.1318 9.54335 10.1318 9.34984L10.1328 6.52614C10.1328 6.43323 10.0957 6.34425 10.0299 6.27849C9.9641 6.21274 9.87444 6.17575 9.7812 6.17575H7.15268V4.52367C7.15268 3.72961 7.34257 3.3265 8.3806 3.3265L9.88627 3.32597C10.0803 3.32597 10.2375 3.16909 10.2375 2.97575V0.353788C10.2375 0.160634 10.0805 0.00393098 9.88663 0.00357362Z" fill="#0E0E0E"></path>
+  </svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black hover:bg-[#E5ABF3]">
+           <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+   <path d="M12.043 0H5.9475C3.14256 0 0.86792 2.26664 0.86792 5.06173V11.1358C0.86792 13.9309 3.14256 16.1975 5.9475 16.1975H12.043C14.8479 16.1975 17.1226 13.9309 17.1226 11.1358V5.06173C17.1226 2.26664 14.8479 0 12.043 0ZM15.5987 11.1358C15.5987 13.0896 14.0037 14.679 12.043 14.679H5.9475C3.98678 14.679 2.39179 13.0896 2.39179 11.1358V5.06173C2.39179 3.1079 3.98678 1.51852 5.9475 1.51852H12.043C14.0037 1.51852 15.5987 3.1079 15.5987 5.06173V11.1358Z" fill="#0E0E0E"></path><path d="M9.00312 4.05713C6.75896 4.05713 4.93945 5.87024 4.93945 8.10651C4.93945 10.3428 6.75896 12.1559 9.00312 12.1559C11.2473 12.1559 13.0668 10.3428 13.0668 8.10651C13.0668 5.87024 11.2473 4.05713 9.00312 4.05713ZM9.00312 10.6374C7.60319 10.6374 6.46333 9.50153 6.46333 8.10651C6.46333 6.71049 7.60319 5.57565 9.00312 5.57565C10.4031 5.57565 11.5429 6.71049 11.5429 8.10651C11.5429 9.50153 10.4031 10.6374 9.00312 10.6374Z" fill="#0E0E0E"></path><path d="M13.3527 4.29821C13.653 4.29821 13.8964 4.05602 13.8964 3.75726C13.8964 3.4585 13.653 3.21631 13.3527 3.21631C13.0525 3.21631 12.8091 3.4585 12.8091 3.75726C12.8091 4.05602 13.0525 4.29821 13.3527 4.29821Z" fill="#0E0E0E"></path>
+   </svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-black hover:bg-[#E5ABF3]">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.877 15.0112V15.0106H15.8807V9.49947C15.8807 6.8034 15.2983 4.72656 12.1353 4.72656C10.6147 4.72656 9.59433 5.55805 9.17775 6.34633H9.13377V4.97826H6.13477V15.0106H9.25755V10.0429C9.25755 8.73498 9.50637 7.47022 11.1318 7.47022C12.7335 7.47022 12.7573 8.96289 12.7573 10.1268V15.0112H15.877Z" fill="#0E0E0E"></path>
+    <path d="M1.0498 4.99463H4.17636V15.0269H1.0498V4.99463Z" fill="#0E0E0E"></path>
+    <path d="M2.62114 0C1.62147 0 0.810303 0.808321 0.810303 1.80448C0.810303 2.80063 1.62147 3.62586 2.62114 3.62586C3.62081 3.62586 4.43198 2.80063 4.43198 1.80448C4.43135 0.808321 3.62018 0 2.62114 0V0Z" fill="#0E0E0E"></path>
+   </svg>
+        </a>
+      </div>
+    </div>
+
+    
+    <div>
+      <h3 class="text-black font-bold mb-4 text-[20px]">Company</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-black">About Us</a></li>
+        <li><a href="#" class="hover:text-black">Contact US</a></li>
+        <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-black">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <h3 class="text-black font-bold mb-4 text-[20px] ">Utility pages</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-black">Instructions</a></li>
+        <li><a href="#" class="hover:text-black">Style guide</a></li>
+        <li><a href="#" class="hover:text-black">404 Pages</a></li>
+        <li><a href="#" class="hover:text-black">Licenses</a></li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <h3 class="text-black font-semibold mb-4 text-[20px] font-bold">Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Enter Your Email" class="w-full px-4 py-3 border rounded-full border-gray-400 mb-4 focus:outline-none focus:ring-2 focus:ring-purple-300">
+      <button class="w-full bg-[#e7b4f3] hover:bg-[#db9ff0] text-black font-semibold py-3 rounded-full transition">
+        Subscribe now
+      </button>
+    </div>
+  </div>
+
+  
+ <div class=" border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-center items-center  text-gray-500 text-sm">
+                <p> 2024 Mthemeus All Rights Reserved.</p>
+                
+            </div>
+
+  
+ 
+</footer>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const mobileDropdownTriggers = document.querySelectorAll('.mobile-dropdown-trigger');
+
+            // Function to toggle the mobile menu (slide in/out)
+            function toggleMobileMenu() {
+                dropdownMenu.classList.toggle('translate-x-full'); // Hides the menu
+                dropdownMenu.classList.toggle('translate-x-0');    // Shows the menu
+            }
+
+            // Event listeners for opening/closing the main mobile menu
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', toggleMobileMenu);
+            });
+
+            // Event listeners for toggling mobile submenus
+            mobileDropdownTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const submenu = this.nextElementSibling; // Get the next sibling, which is the submenu div
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden'); // Toggle visibility of the submenu
+                        // Rotate arrow icon for submenu
+                        const arrowIcon = this.querySelector('.arrow-down-icon');
+                        if (arrowIcon) {
+                            arrowIcon.classList.toggle('rotate-0'); // Reset rotation
+                            arrowIcon.classList.toggle('rotate-180'); // Rotate when open
+                        }
+                    }
+                });
+            });
+
+            // Optional: Close mobile menu when clicking outside (or navigating)
+            // You might need a more sophisticated click-outside handler depending on your needs.
+            // For simplicity, this example just closes it on any click outside the menu.
+            document.addEventListener('click', function(event) {
+                if (!dropdownMenu.contains(event.target) && !Array.from(toggleButtons).some(btn => btn.contains(event.target))) {
+                    if (dropdownMenu.classList.contains('translate-x-0')) {
+                        dropdownMenu.classList.remove('translate-x-0');
+                        dropdownMenu.classList.add('translate-x-full');
+                        // Ensure all submenus are hidden when the main menu closes
+                        mobileDropdownTriggers.forEach(trigger => {
+                            const submenu = trigger.nextElementSibling;
+                            if (submenu && !submenu.classList.contains('hidden')) {
+                                submenu.classList.add('hidden');
+                                const arrowIcon = trigger.querySelector('.arrow-down-icon');
+                                if (arrowIcon) {
+                                    arrowIcon.classList.remove('rotate-180');
+                                    arrowIcon.classList.add('rotate-0');
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+
+            // Reset arrow direction when opening/closing main dropdown menu
+            // This ensures all submenu arrows are reset when the main menu slides out
+            dropdownMenu.addEventListener('transitionend', function() {
+                if (dropdownMenu.classList.contains('translate-x-full')) { // Menu is closing/closed
+                    mobileDropdownTriggers.forEach(trigger => {
+                        const arrowIcon = trigger.querySelector('.arrow-down-icon');
+                        if (arrowIcon) {
+                            arrowIcon.classList.remove('rotate-180');
+                            arrowIcon.classList.add('rotate-0');
+                        }
+                    });
+                }
+            });
+        });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Animation duration in milliseconds
+        const duration = 2000;
+        const startTime = Date.now();
+        
+        // Target values
+        const targets = [
+            { element: 'counter1', target: 50, suffix: 'k' },
+            { element: 'counter2', target: 78, suffix: 'k+' },
+            { element: 'counter3', target: 100, suffix: '%' }
+        ];
+        
+        function animateCounters() {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            targets.forEach(counter => {
+                const currentValue = Math.floor(progress * counter.target);
+                const element = document.getElementById(counter.element);
+                
+                if (counter.suffix === '%') {
+                    element.textContent = `${currentValue}${counter.suffix}`;
+                } else {
+                    element.textContent = `${currentValue}${counter.suffix}`;
+                }
+            });
+            
+            if (progress < 1) {
+                requestAnimationFrame(animateCounters);
+            }
+        }
+        
+        // Start the animation
+        animateCounters();
+    });
+
+   
+    const sharedAnswer = "Cryptocurrencies are digital or virtual currencies that use cryptography for security and a operate on decentralized.";
+
+    const faqData = [
+      { question: "How do I make money with cryptocurrencies?" },
+      { question: "What is the coin to invest in today?" },
+      { question: "Is cryptocurrency used for illegal activities?" },
+      { question: "How can one buy/sell crypto tokens?" },
+      { question: "How to start trading in cryptocurrency?" },
+      { question: "Is crypto trading risky?" }
+    ];
+
+    function renderFaqs(data) {
+      const leftCol = document.getElementById("faq-left");
+      const rightCol = document.getElementById("faq-right");
+
+      data.forEach((item, index) => {
+        const i = index + 1;
+        const wrapper = document.createElement("div");
+        wrapper.className = "bg-white text-gray-900 rounded-xl border border-gray-100 overflow-hidden transition-colors duration-300";
+        wrapper.id = `faq-container-${i}`;
+        wrapper.innerHTML = `
+          <div class="flex justify-between items-center p-6 cursor-pointer" data-index="${i}" onclick="toggleFaq(this)">
+            <h3 id="faq-question-title-${i}" class="text-[20px] font-bold">${item.question}</h3>
+            <div id="faq-arrow-background-${i}" class="bg-pink-400 p-2 rounded-full flex items-center justify-center">
+              <svg id="faq-arrow-symbol-${i}" class="w-6 h-6 text-white transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div id="faq-content-${i}" class="px-6 transition-all duration-300 ease-in-out" style="max-height: 0px;">
+            <p id="faq-text-${i}" class="pb-6 text-gray-600 text-[18px]">${sharedAnswer}</p>
+          </div>
+        `;
+        if (index < 3) {
+          leftCol.appendChild(wrapper);
+        } else {
+          rightCol.appendChild(wrapper);
+        }
+      });
+    }
+
+    function toggleFaq(el) {
+      const i = el.dataset.index;
+      const container = document.getElementById(`faq-container-${i}`);
+      const content = document.getElementById(`faq-content-${i}`);
+      const arrow = document.getElementById(`faq-arrow-symbol-${i}`);
+      const arrowBg = document.getElementById(`faq-arrow-background-${i}`);
+      const question = document.getElementById(`faq-question-title-${i}`);
+      const answer = document.getElementById(`faq-text-${i}`);
+
+      const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      if (isExpanded) {
+        content.style.maxHeight = '0px';
+        arrow.classList.replace('rotate-0', 'rotate-180');
+        container.classList.replace('bg-black', 'bg-white');
+        container.classList.replace('text-white', 'text-gray-900');
+        container.classList.replace('border-transparent', 'border-gray-100');
+        question.classList.replace('text-white', 'text-gray-900');
+        answer.classList.replace('text-white', 'text-gray-600');
+        arrowBg.classList.replace('bg-white', 'bg-pink-400');
+        arrow.classList.replace('text-black', 'text-white');
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        arrow.classList.replace('rotate-180', 'rotate-0');
+        container.classList.replace('bg-white', 'bg-black');
+        container.classList.replace('text-gray-900', 'text-white');
+        container.classList.replace('border-gray-100', 'border-transparent');
+        question.classList.replace('text-gray-900', 'text-white');
+        answer.classList.replace('text-gray-600', 'text-white');
+        arrowBg.classList.replace('bg-pink-400', 'bg-white');
+        arrow.classList.replace('text-white', 'text-black');
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderFaqs(faqData);
+    });
+  
+
+    </script>
+
+</body>
+</html>
