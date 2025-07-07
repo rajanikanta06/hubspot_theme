@@ -32,6 +32,34 @@
         .dropdown-menu::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+  
+  
+        /* Custom font size for the heading to ensure exactly 75px */
+        .text-custom-75px {
+            font-size: 75px;
+            line-height: 1.1;
+        }
+
+        /* Specific styles for the yellow stars */
+        .star {
+            color: #fcd34d;
+            font-size: 1.75rem; /* Current star size */
+            margin-right: 0.125rem;
+        }
+
+        /* Styles for the quote images */
+        .quote-img-open {
+            position: absolute;
+            top: 2rem;
+            left: 1.5rem;
+            width: 4rem; /* Equivalent to Tailwind's w-16 */
+            height: auto;
+            opacity: 0.8;
+            /* If your quote image needs to be rotated for the opening quote, use this: */
+            /* transform: rotate(180deg); */
+        }
+        /* Note: The closing quote image (quote-img-close) was not present in your last snippet. */
+        /* If you need a closing quote image, you would add an img tag for it to each card. */       
     </style>
 
 
@@ -43,7 +71,7 @@
 
     <nav class="container max-w-7xl py-6  mx-auto flex justify-between items-center md:px-0">
         <a href="#" class="flex items-center text-xl font-bold text-gray-900">
-            <img src="image/logo-dark.bc42d68d.svg" alt="Sofax Logo" class="h-auto" style="width: 100px;">
+            <img src="image/Group 65.png" alt="Sofax Logo" class="w-90 h-auto object-contain mr-2 px-2 sm:px-0">
         </a>
 
         <ul class="hidden md:flex items-center space-x-8 text-sm font-medium">
@@ -141,7 +169,7 @@
             <li><a href="#" class="text-gray-800 text-[18px]">Contact Us</a></li>
         </ul>
 
-        <div class="hidden md:block relative inline-block overflow-hidden bg-[#E5ABF3] text-black font-semibold px-6 py-3 rounded-full cursor-pointer group select-none ml-10" style="width:130px; text-align:center;">
+        <div class="hidden md:block relative inline-block overflow-hidden bg-[#4F6BE9] text-white font-semibold px-6 py-3 rounded-full cursor-pointer group select-none ml-10" style="width:130px; text-align:center;">
             <span class="block transition-transform duration-700 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 group-hover:pointer-events-none">
                 Get started
             </span>
@@ -150,7 +178,7 @@
             </span>
         </div>
 
-        <div class="toggle-button block md:hidden cursor-pointer">
+        <div class="toggle-button block md:hidden cursor-pointer px-2">
             <i class="fa-solid fa-bars fa-2x text-gray-700 hover:text-gray-900"></i>
         </div>
     </nav>
@@ -227,27 +255,24 @@
 
 
   <section class="relative container max-w-6xl mx-auto px-4 py-16 sm:mt-10 sm:px-0 sm:py-20 text-center">
-        <h1 class="text-4xl sm:text-[75px] lg:text-[100px] font-[700] leading-tight px-2">
-            Best platform to <br class="sm:hidden" />
-            manage your sales
+
+        <h1 class="text-[36px] sm:text-[75px] font-bold tracking-tight">
+            Best platform to manage your sales
         </h1>
         <div class="relative mt-8 max-w-2xl sm:max-w-6xl mx-auto">
 
-            <img src="image/shape1.webp" alt="Yellow Arrow"
-                class="hidden sm:block absolute -left-10 top-1 sm:-left-16 sm:top-2 w-28 sm:w-36 z-0" />
-
-            <p class="text-gray-600 text-base sm:text-lg lg:text-[20px] relative z-10 bg-white inline-block  py-2 sm:px-6 sm:py-3">
-                The best platform for you will depend on factors such as your business size, budget, integration needs and <br class="hidden sm:block">
-                specific sales processes. Offering visual pipeline management sales reporting & email interaction.
+            <p class="bg-white block py-2 sm:px-6 sm:py-3 tracking-widest text-gray-600 text-base sm:text-[18px] line-clamp-6">
+                The best platform for you will depend on factors such as your business size, budget, integration needs and specific sales processes. Offering visual pipeline management sales reporting & email integration.
             </p>
+
         </div>
 
 
-        <div class="mt-8 sm:mt-12 flex flex-col items-center space-y-6 px-4 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-0">
-            <div class="flex items-center bg-white border border-gray-300 rounded-full overflow-hidden shadow-md w-full sm:w-auto sm:max-w-lg">
+        <div class=" mt-8 sm:mt-12 flex flex-col items-center space-y-6 px-4 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-0">
+            <div class="flex items-center bg-white border border-gray-300 rounded-full overflow-hidden shadow-md w-full sm:w-auto sm:max-w-3xl">
                 <input type="email" placeholder="Enter your email"
-                    class="px-5 py-3 outline-none w-full text-sm sm:px-7 sm:py-5 sm:w-80" />
-                <button class="hidden sm:block bg-[#E5ABF3] text-black font-semibold px-5 py-3 hover:bg-black hover:text-white text-sm rounded-full mr-2 whitespace-nowrap">
+                    class="px-5 py-3 outline-none w-full text-sm sm:px-7 sm:py-5 sm:w-[800px]" />
+                <button class="hidden sm:block bg-[#4F6BE9] text-white font-semibold px-10 py-3 hover:bg-black hover:text-white text-sm rounded-full whitespace-nowrap ">
                     Start a 14 days free trial
                 </button>
             </div>
@@ -258,7 +283,7 @@
         </div>
 
 
-        <div class="mt-4 flex flex-col sm:flex-row justify-center items-center text-gray-700 space-y-2 sm:space-y-0 sm:space-x-2">
+        <div class="mt-4 flex flex-col justify-center items-center text-gray-700 space-y-2 sm:space-y-0 sm:space-x-2">
             <div class="flex items-center space-x-1 text-base sm:text-xl">
                 <svg class="w-5 h-5 text-[#0c9347]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.445a1 1 0 00-.364 1.118l1.285 3.955c.3.921-.755 1.688-1.54 1.118l-3.36-2.445a1 1 0 00-1.176 0l-3.36 2.445c-.784.57-1.838-.197-1.539-1.118l1.285-3.955a1 1 0 00-.364-1.118L2.078 9.382c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.955z"/>
@@ -282,23 +307,15 @@
                     <path fill="url(#half)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.445a1 1 0 00-.364 1.118l1.285 3.955c.3.921-.755 1.688-1.54 1.118l-3.36-2.445a1 1 0 00-1.176 0l-3.36 2.445c-.784.57-1.838-.197-1.539-1.118l1.285-3.955a1 1 0 00-.364-1.118L2.078 9.382c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.955z"/>
                 </svg>
             </div>
-            <p class="text-sm sm:text-[18px]">4.8/5 rating software trusted by users</p>
+            <p class="text-sm sm:text-[18px] pt-2">4.8/5 rating software trusted by users</p>
         </div>
     </section>
 
-
-
 <div class="relative max-w-7xl mx-auto  px-4 md:px-0 ">
-  <div class="flex flex-row justify-between items-center mx-auto">
-    <img src="image/dashboard.webp" alt="" class="rounded-xl overflow-hidden">
+  <div class="flex flex-row justify-between items-center mx-auto px-20">
+    <img src="image/f7ef5611f552153c1a6a2507cfa89a0195b23024.png" alt="" class="rounded-xl overflow-hidden">
 
-    <div class="absolute top-5 right-0 translate-x-1/2 py-10">
-      <img
-        src="image/shape2.webp"
-        alt="Shape Accent"
-        class="hidden sm:block sm:w-48 pointer-events-none"
-      />
-    </div>
+   
   </div>
 </div>
 
@@ -346,13 +363,13 @@
 
 
 
- <div class="w-full bg-[#F9F9FA]">
+ <div class="w-full bg-white">
     <div class="max-w-7xl mx-auto px-4 py-16 sm:px-4 mt-10"> <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 sm:pt-10 items-center">
             <h1 class="col-span-full md:col-span-2 text-4xl sm:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight mb-8 md:mb-0 mx-auto text-center md:mx-0 md:text-left">
                 Solution to organize your sales in one place
             </h1>
             
-            <div class="col-span-full md:col-span-1 relative inline-block overflow-hidden bg-[#E5ABF3] text-black font-semibold px-10 py-5 rounded-full cursor-pointer group select-none mx-auto w-fit md:justify-self-end md:-mr-[4px]">
+            <div class="col-span-full md:col-span-1 relative inline-block overflow-hidden bg-[#4F6BE9] text-white font-semibold px-10 py-5 rounded-full cursor-pointer group select-none mx-auto w-fit md:justify-self-end md:-mr-[4px]">
                 <span class="block transition-transform duration-700 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 group-hover:pointer-events-none">
                     View all services
                 </span>
@@ -364,9 +381,9 @@
 
         <div class="flex justify-center">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full"> 
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl ">
+                <div class="bg-[#4F6BE94D] rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl ">
                     <div class="p-4 rounded-lg bg-purple-100 mb-6">
-                        <img src="image/icon1.webp" alt="">
+                        <img src="image/a0af1367e9a236df3c570a0f03f466e576fb65dd.png" alt="" class="w-[60px] h-[60px]">
                     </div>
                     <h3 class="text-[24px] font-bold mb-3">Workflow Automation</h3>
                     <p class="text-gray-600 mb-6 flex-grow text-[20px]">
@@ -378,9 +395,9 @@
                     </a>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl">
+                <div class="bg-[#4F6BE94D] rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl">
                     <div class="p-4 rounded-lg bg-yellow-100 mb-6">
-                        <img src="image/icon2.webp" alt="">
+                        <img src="image/f514ef2a74d3e9e1aba4f3904771417fa17bc8d0.png" alt="" class="w-[60px] h-[60px]">
                     </div>
                     <h3 class="text-[24px] font-bold mb-3">Lead Management</h3>
                     <p class="text-gray-600 mb-6 flex-grow text-[20px]">
@@ -392,9 +409,9 @@
                     </a>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl ">
+                <div class="bg-[#4F6BE94D] rounded-xl shadow-lg p-8 flex flex-col items-start hover:shadow-2xl ">
                     <div class="p-4 rounded-lg bg-green-100 mb-6">
-                        <img src="image/icon3.webp" alt="">
+                        <img src="image/9de515c0e50332419fd817406b7f42808276ffe2.png" alt="" class="w-[60px] h-[60px]">
                     </div>
                     <h3 class="text-[24px] font-bold mb-3">Sales Forecasting</h3>
                     <p class="text-gray-600 mb-6 flex-grow text-[20px]">
@@ -409,372 +426,470 @@
         </div>
     </div>
 </div>
+
+
+
  
- <section class="bg-white py-20">
-  <div class=" max-w-7xl mx-auto px-6  flex flex-col md:flex-row items-center  mt-10 sm:mt-10 sm:pt-10 overflow:hidden">
-    
+ <section class=" py-20 relative overflow-hidden bg-[#F8FAFF] ">
   
-    <div class="md:w-1/2 relative  ">
-      
-      <img src="image/contentthumb1.webp" alt="Man with iPad"
-           class="rounded-[20px] w-[350px] md:w-[400px] lg:w-[440px]  " />
+  <div class="absolute inset-y-0 right-0 w-1/2  z-0"></div>
 
-      
-      <img src="image/card.webp" alt="Pie Chart"
-           class="absolute bottom-8 left-1/2 -translate-x-1/2 w-[220px] md:w-[260px]  rounded-[20px] animate-bounce" />
-    </div>
-
-     <div class="container max-w-6xl md:w-1/2 mt-8 md:mt-0 text-center md:text-left flex flex-col items-center md:items-start">
-  <h2 class="text-4xl sm:text-[75px] lg:text-6xl font-bold leading-tight mb-6">
-    Optimize your sales without any hassle
-  </h2>
-  <p class="text-[18px] text-gray-600 mb-10 leading-relaxed">
-    Sales forecasting, & analytics that enable users to streamline their sales workflows, identify areas for improvement and also make data-driven.
-  </p>
-
-  <ul class="space-y-6">
-    <li class="flex items-start text-left">
-      <div class="flex-shrink-0 mt-1">
-        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div class="ml-4">
-        <h3 class="text-[24px] font-semibold mb-2">Streamline processes</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Automate repetitive tasks such as lead nurturing, follow- ups and order to the processing with using salesphere.
-        </p>
-      </div>
-    </li>
-
-    <li class="flex items-start text-left">
-      <div class="flex-shrink-0 mt-1">
-        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div class="ml-4">
-        <h3 class="text-xl font-semibold mb-2">Understand your audience</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Utilize salesphere to gather data and insights about your target audience. Their needs preferences & pain points.
-        </p>
-      </div>
-    </li>
-
-    <li class="flex items-start text-left">
-      <div class="flex-shrink-0 mt-1">
-        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div class="ml-4">
-        <h3 class="text-xl font-semibold mb-2">Utilize customer data</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Use this data to understand your customers preferences behaviors and pain the points,tailor your sales pitches.
-        </p>
-      </div>
-    </li>
-  </ul>
+  <div
+    class="max-w-7xl mx-auto  relative z-10 flex flex-col md:flex-row items-center mt-10 sm:mt-10 sm:pt-10 gap-20"
+  >
+    <div class="md:w-1/2 relative flex justify-center md:justify-start">
+  <div
+    class="absolute   -inset-6  border-4 border-blue-500 transform translate-x-4 translate-y-4 -z-10"
+    style="
+      top: -60px; /* Adjust this value for desired top margin from image */
+      left: -30px; /* Start at the image's left edge */
+      width: calc(90% - 10px); /* Make border 20px narrower than image on the right */
+      height: 120%; /* Keep full height relative to image */
+      /* No need for justify-start here as it's an absolute element */
+    "
+  ></div>
+  <img
+    src="image/ae9803f9230daa938c46fe0ff387ffc83f558b4a.png"
+    alt="Man with iPad"
+    class="w-[110%] h-auto max-w-md md:max-w-none relative z-0 rounded-xl"
+  />
 </div>
 
+    <div
+      class="md:w-1/2 mt-8 md:mt-0 text-center md:text-left flex flex-col items-center md:items-start"
+    >
+      <h2 class="text-4xl sm:text-[75px] lg:text-6xl font-bold leading-tight mb-6">
+        Optimize your sales without any hassle
+      </h2>
+      <p class="text-[18px] text-gray-600 mb-10 leading-relaxed">
+        Sales forecasting, & analytics that enable users to streamline their
+        sales workflows, identify areas for improvement and also make
+        data-driven.
+      </p>
 
+      <ul class="space-y-6">
+        <li class="flex items-start text-left">
+          <div class="flex-shrink-0 mt-1">
+            <img src="image/R.png" alt="" class="px-2 sm:px-0">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-[24px] font-semibold mb-2">Streamline processes</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Automate repetitive tasks such as lead nurturing, follow- ups and
+              order to the processing with using salesphere.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex items-start text-left">
+          <div class="flex-shrink-0 mt-1">
+            <img src="image/R.png" alt="" class="px-2 sm:px-0">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold mb-2">Understand your audience</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Utilize salesphere to gather data and insights about your target
+              audience. Their needs preferences & pain points.
+            </p>
+          </div>
+        </li>
+
+        <li class="flex items-start text-left">
+          <div class="flex-shrink-0 mt-1">
+            <img src="image/R.png" alt="" class="px-2 sm:px-0">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold mb-2">Utilize customer data</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Use this data to understand your customers preferences behaviors
+              and pain the points,tailor your sales pitches.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
 
 
- <div class="max-w-7xl mx-auto relative py-8 px-4 md:px-0">
-  <div class="flex flex-col-reverse md:flex-row gap-10">
+<div class="max-w-7xl mx-auto relative py-8 px-4 md:px-0">
+    <div class="flex flex-col-reverse md:flex-row gap-10">
 
- 
-    <div class="md:w-full">
-      <h1 class="text-4xl  md:text-[75px] font-bold leading-[1.1] mb-6 text-center md:text-left">
-        Use sales insights to<br>drive your strategy
-      </h1>
+        <div class="w-full md:w-1/2"> <h1 class="text-[36px] md:text-[50px] font-bold leading-[1.1] mb-6 text-center md:text-left">
+                Use sales insights to<br>drive your strategy
+            </h1>
 
-      <p class="text-base md:text-[19px] mb-8 text-gray-700 text-center md:text-left">
-        These are just a few examples & the best choice for you will depend on the factors such as your budget, your team & the specific features you need.
-      </p>
-
-      <div class="space-y-6 mb-8">
-        <div class="flex items-start">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center"> <img src="image/icon9.webp" alt="Placeholder icon for time saved">
-          </div>
-          <div class="ml-4"> <h3 class="text-[24px] font-semibold text-gray-800 leading-normal">Time saved in closing deals</h3>
-            <p class="text-base text-[19px] text-gray-600 leading-normal">
-              You'll save time managing and closing deals by having a centralized hub for all your sales activities.
+            <p class="text-base md:text-[19px] mb-8 text-gray-700 text-center md:text-left">
+                These are just a few examples & the best choice for you will depend on the factors such as your budget, your team & the specific features you need.
             </p>
-          </div>
-        </div>
 
-        <div class="flex items-start">
-          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center"> <img src="image/icon4.png" alt="Placeholder icon for data access">
-          </div>
-          <div class="ml-4"> <h3 class="text-[24px] font-semibold text-gray-800 leading-normal">Quick access of data & communication</h3>
-            <p class="text-base text-[19px] text-gray-600 leading-normal">
-              Quickly access all the information you need to close deals. Have contact details for each prospect in one place.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-
-      
-      
-<div class="w-full flex md:block">
-  <div class="relative inline-block overflow-hidden bg-[#E5ABF3] text-black font-semibold px-10 py-5 rounded-full cursor-pointer group select-none mx-auto md:ml-auto" style="white-space: nowrap;">
-    <span class="block transition-transform duration-700 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 group-hover:pointer-events-none">
-      Get started
-    </span>
-    <span class="absolute inset-0 flex items-center justify-center transform translate-y-full opacity-0 transition-all duration-700 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
-      Get started
-    </span>
-  </div>
-</div>
-
-
-    </div>
-
-    
-    <div class="md:w-1/2 flex items-center justify-center px-4 md:px-8">
-      <img src="image/contentimg2 (1).webp" alt="Illustration" class="max-w-full h-auto rounded-xl ">
-    </div>
-
-  </div>
-
-  
-  <img src="image/shape3.webp" alt="Decorative shape"
-       class="hidden sm:block absolute top-5 right-10 w-24 sm:w-32 h-24 sm:h-32 -z-0 opacity-50 object-contain transform -translate-y-1/4 translate-x-1/4 md:translate-x-1/2 lg:translate-x-3/4">
-</div>
-
-
-
- <div class="bg-[#F9F9FA] py-12 space-y-12 mt-10 pt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-2">
-        <div>
-            <h2 class="text-center font-bold text-[40px] leading-tight md:leading-normal text-xl sm:text-4xl md:text-5xl lg:text-[75px]">
-                Discover the right <br />
-                price plan for you
-            </h2>
-        </div>
-
-        <div class="flex items-center justify-center space-x-4 mt-8">
-            <p id="monthlyLabel" class="text-base sm:text-lg md:text-[20px] font-semibold text-gray-600">Per Month</p>
-
-            <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" class="sr-only peer" id="pricingToggleCheckbox" />
-                <div
-                    class="
-            w-14 h-7 rounded-full bg-[#E5ABF3]
-            peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#E5ABF3]
-            peer-checked:bg-[#E5ABF3] transition-colors duration-200
-            "
-                ></div>
-                <div
-                    class="
-            absolute left-0.5 top-0.5 w-6 h-6 bg-black rounded-full
-            peer-checked:translate-x-7 transition-transform duration-200
-            "
-                ></div>
-            </label>
-
-            <p id="yearlyLabel" class="text-base sm:text-lg md:text-[20px] font-semibold text-gray-800">Per Year</p>
-        </div>
-
-        <section class="bg-[#F9F9FA] py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch justify-items-center">
-                    <div class="bg-white rounded-xl shadow border p-8 flex flex-col w-[380px] h-[620px]">
-                        <div class="mb-4">
-                            <img src="image/icon7.png" alt="" class="max-w-full h-auto" />
-                        </div>
-                        <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">Essential</h3>
-                        <div class="flex items-baseline mb-4">
-                            <p id="price-essential" class="text-5xl sm:text-6xl md:text-[75px] font-bold">$39</p>
-                            <p id="period-essential" class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]">/ Monthly</p>
-                        </div>
-                        <hr class="my-4" />
-                        <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">Key features:</p>
-                        <ul class="text-gray-700 space-y-3 font-medium text-[20px] flex-grow leading-tight">
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Lead, deal, contact, calendar and pipeline management
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Seamless data import and 400+ integrations
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>24/7, multi-language support
-                            </li>
-                        </ul>
-                        <button
-                            class="mt-6 w-full border border-black text-black py-3 rounded-full font-bold hover:bg-black hover:text-white transition">
-                            Purchase now
-                        </button>
+            <div class="space-y-6 mb-8">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                        <img src="image/R (1).png" alt="Placeholder icon for time saved">
                     </div>
-
-                    <div class="bg-white rounded-xl shadow border p-8 flex flex-col w-[380px] h-[620px]">
-                        <div class="mb-4">
-                            <img src="image/icon5.webp" alt="" class="max-w-full h-auto" />
-                        </div>
-                        <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">Professional</h3>
-                        <div class="flex items-baseline mb-4">
-                            <p id="price-professional" class="text-5xl sm:text-6xl md:text-[75px] font-bold">$69</p>
-                            <p id="period-professional" class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]">/ Monthly</p>
-                        </div>
-                        <hr class="my-4" />
-                        <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">Key features:</p>
-                        <ul class="text-gray-700 space-y-3 text-[20px] font-medium flex-grow leading-tight">
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Full email sync with templates, open, click tracking & emailing
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Automations builder, including email sequences
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Meeting, email and video call
-                            </li>
-                        </ul>
-                        <button
-                            class="mt-6 w-full bg-[#E5ABF3] text-black py-3 rounded-full font-bold hover:bg-[#d48ce9] transition">
-                            Purchase now
-                        </button>
+                    <div class="ml-4">
+                        <h3 class="text-[24px] font-semibold text-gray-800 leading-normal">Time saved in closing deals</h3>
+                        <p class="text-base md:text-[19px] text-gray-600 leading-normal"> You'll save time managing and closing deals by having a centralized hub for all your sales activities.
+                        </p>
                     </div>
+                </div>
 
-                    <div class="bg-white rounded-xl shadow border p-8 flex flex-col w-[380px] h-[620px]">
-                        <div class="mb-4">
-                            <img src="image/icon6.webp" alt="" class="max-w-full h-auto" />
-                        </div>
-                        <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">Enterprise</h3>
-                        <div class="flex items-baseline mb-4">
-                            <p id="price-enterprise" class="text-5xl sm:text-6xl md:text-[75px] font-bold">$199</p>
-                            <p id="period-enterprise" class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]">/ Monthly</p>
-                        </div>
-                        <hr class="my-4" />
-                        <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">Key features:</p>
-                        <ul class="text-gray-700 space-y-3 text-[20px] font-medium flex-grow leading-tight">
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Streamlined lead routing and account access control
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Document and contract management with e-signatures
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-lg">
-                                    <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
-                                                fill="#1C274C"></path>
-                                        </g>
-                                    </svg>
-                                </span>Revenue forecasts & reporting
-                            </li>
-                        </ul>
-                        <button
-                            class="mt-6 w-full border border-black text-black py-3 rounded-full font-bold hover:bg-black hover:text-white transition">
-                            Purchase now
-                        </button>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                        <img src="image/R (1).png" alt="Placeholder icon for data access">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-[24px] font-semibold text-gray-800 leading-normal">Quick access of data & communication</h3>
+                        <p class="text-base md:text-[19px] text-gray-600 leading-normal"> Quickly access all the information you need to close deals. Have contact details for each prospect in one place.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="w-full flex md:block">
+                <div class="relative inline-block overflow-hidden bg-[#4F6BE9] text-white font-semibold px-10 py-5 rounded-full cursor-pointer group select-none mx-auto md:ml-auto" style="white-space: nowrap;">
+                    <span class="block transition-transform duration-700 ease-in-out group-hover:-translate-y-full group-hover:opacity-0 group-hover:pointer-events-none">
+                        Get started
+                    </span>
+                    <span class="absolute inset-0 flex items-center justify-center transform translate-y-full opacity-0 transition-all duration-700 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                        Get started
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="md:w-1/2 relative mr-0 md:-mr-32"> <img
+                src="image/image 31.png"
+                alt="Illustration"
+                class="w-full h-auto object-cover"
+            />
+        </div>
+
     </div>
 </div>
 
 
 
- <section class="bg-black text-white py-16 px-4 md:px-8 lg:px-16 ">
+ <div class="bg-[#F9F9FA] py-12 space-y-12 pt-20 mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-2">
+    <div>
+      <h2
+        class="text-center font-bold text-[40px] leading-tight md:leading-normal text-xl sm:text-4xl md:text-5xl lg:text-[75px]"
+      >
+        Discover the right price plan <br />
+        for you
+      </h2>
+    </div>
+
+    <div class="flex items-center justify-center space-x-4 mt-8">
+      <p
+        id="monthlyLabel"
+        class="text-base sm:text-lg md:text-[20px] font-semibold text-gray-600"
+      >
+        Per Month
+      </p>
+
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" class="sr-only peer" id="pricingToggleCheckbox" />
+        <div
+          class="w-14 h-7 rounded-full bg-[#4F6BE9] peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#4F6BE9] peer-checked:bg-[#4F6BE9] transition-colors duration-200"
+        ></div>
+        <div
+          class="absolute left-0.5 top-0.5 w-6 h-6 bg-[#D6DDFF] rounded-full peer-checked:translate-x-7 transition-transform duration-200"
+        ></div>
+      </label>
+
+      <p
+        id="yearlyLabel"
+        class="text-base sm:text-lg md:text-[20px] font-semibold text-gray-800"
+      >
+        Per Year
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end justify-items-center mt-12"
+      >
+        <div
+          class="bg-white rounded-xl shadow border p-8 flex flex-col w-[380px] h-[620px]"
+        >
+          <div class="mb-4">
+            <img src="image/lightning-icon.png" alt="Lightning Bolt Icon" class="max-w-full h-auto" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">
+            Essential
+          </h3>
+          <div class="flex items-baseline mb-4">
+            <p id="price-essential" class="text-5xl sm:text-6xl md:text-[75px] font-bold">
+              $19
+            </p>
+            <p id="period-essential" class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]">
+              Per Yearly
+            </p>
+          </div>
+          <hr class="my-4" />
+          <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">
+            Key Features:
+          </p>
+          <ul
+            class="text-gray-700 space-y-3 font-medium text-[17px] flex-grow leading-tight"
+          >
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Lead, deal, contact, calendar and pipeline management
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Seamless data import and 400+ integrations
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              24/7, multi-language support
+            </li>
+          </ul>
+          <button
+            class="mt-6 w-full border border-black text-black py-3 rounded-full font-bold hover:bg-black hover:text-white transition"
+          >
+            Purchase Now
+          </button>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),_0_10px_10px_-5px_rgba(0,0,0,0.04)] border-t-8 border-[#4F6BE9] p-8 flex flex-col w-[380px] h-[660px] transform -translate-y-0 relative z-2"
+        >
+          <div class="mb-4">
+            <img src="image/crown-icon.png" alt="Crown Icon" class="max-w-full h-auto" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">
+            Professional
+          </h3>
+          <div class="flex items-baseline mb-4">
+            <p
+              id="price-professional"
+              class="text-5xl sm:text-6xl md:text-[75px] font-bold"
+            >
+              $49
+            </p>
+            <p
+              id="period-professional"
+              class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]"
+            >
+              Per Yearly
+            </p>
+          </div>
+          <hr class="my-4" />
+          <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">
+            Key Features:
+          </p>
+          <ul
+            class="text-gray-700 space-y-3 text-[17px] font-medium flex-grow leading-tight"
+          >
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Full email sync with templates, open, click tracking & emailing
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Automations builder, including email sequences
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Meeting, email and video call
+            </li>
+          </ul>
+          <button
+            class="mt-6 w-full bg-[#4F6BE9] text-white py-3 rounded-full font-bold hover:bg-blue-700 transition"
+          >
+            Purchase Now
+          </button>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow border p-8 flex flex-col w-[380px] h-[620px]"
+        >
+          <div class="mb-4">
+            <img src="image/diamond-icon.png" alt="Diamond Icon" class="max-w-full h-auto" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] font-semibold mb-2">
+            Enterprise
+          </h3>
+          <div class="flex items-baseline mb-4">
+            <p
+              id="price-enterprise"
+              class="text-5xl sm:text-6xl md:text-[75px] font-bold"
+            >
+              $129
+            </p>
+            <p
+              id="period-enterprise"
+              class="text-gray-600 ml-2 text-base sm:text-lg md:text-[18px]"
+            >
+              Per Yearly
+            </p>
+          </div>
+          <hr class="my-4" />
+          <p class="font-semibold mb-3 text-lg sm:text-xl md:text-[18px]">
+            Key Features:
+          </p>
+          <ul
+            class="text-gray-700 space-y-3 text-[17px] font-medium flex-grow leading-tight"
+          >
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Streamlined lead routing and account access control
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Document and contract management with e-signatures
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#22C55E" />
+                  <path
+                    d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              Revenue forecasts & reporting
+            </li>
+          </ul>
+          <button
+            class="mt-6 w-full border border-black text-black py-3 rounded-full font-bold hover:bg-black hover:text-white transition"
+          >
+            Purchase Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <section class="bg-[#E5EAFF] text-white py-16 px-4 md:px-8 lg:px-16 mt-20 ">
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
     
     <div class="lg:w-1/2 flex justify-center items-center">
@@ -782,22 +897,22 @@
     </div>
 
     
-    <div class="text-center lg:text-left lg:w-1/2">
+    <div class="text-center text-black lg:text-left lg:w-1/2">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
         Integrate your tech <br class="hidden sm:inline"> stack & many tools
       </h2>
-      <p class="text-gray-300 text-lg sm:text-xl mb-8 leading-relaxed">
+      <p class="text-black text-lg sm:text-xl mb-8 leading-relaxed">
         Integrating with the apps that drive your business. Seamlessly connect
         with your favorite or new tools with tailored recommendations.
       </p>
 
       
       <div class="flex justify-center lg:justify-start">
-        <div class="relative inline-block overflow-hidden bg-[#E5ABF3] text-black font-semibold px-10 py-5 rounded-full cursor-pointer group select-none lg:mr-20"
+        <div class="relative inline-block overflow-hidden bg-[#4F6BE9] text-white font-semibold px-10 py-5 rounded-full cursor-pointer group select-none lg:mr-20"
              style="white-space: nowrap; text-align:center;">
           <span class="block transition-transform duration-700 ease-in-out
                        group-hover:-translate-y-full group-hover:opacity-0 pointer-events-none">
-            View all services
+            View All Integration
           </span>
           <span class="absolute inset-0 flex items-center justify-center
                        transform translate-y-full opacity-0
@@ -813,279 +928,97 @@
 
 
 
+   <section class="max-w-7xl mx-auto py-16 px-4 mt-10">
+        <div class="text-center mb-12">
+            <h2 class="text-5xl md:text-6xl lg:text-custom-75px font-bold text-gray-800 leading-tight">
+                See What Our Users Have <br> To Say About It
+            </h2>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:flex-nowrap justify-center gap-8 overflow-x-auto">
+
+            <div class="w-full sm:w-11/12 md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.33rem)] bg-white p-8 rounded-lg shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[22rem]">
+                <img src="image/“.png" alt="Opening Quote" class="quote-img-open">
+                <div class="flex justify-end mb-4 relative z-10">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6 z-10">I am a would need more details to a provide relevant information business clients' reviews are feedback from in a individuals or companies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <div>
+                        <p class="font-semibold text-gray-900 text-lg text-left">Smith Align</p>
+                        <p class="text-gray-500 text-sm text-left">Businessman</p>
+                    </div>
+                    <img src="image/Mask group (1).png" alt="Smith Align" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
+                </div>
+            </div>
+
+            <div class="w-full sm:w-11/12 md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.33rem)] bg-white p-8 rounded-lg shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[22rem]">
+                <img src="image/“.png" alt="Opening Quote" class="quote-img-open">
+                <div class="flex justify-end mb-4 relative z-10">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6 z-10">Great results enjoyable to the works with & most importantly enabled us to the presence on the website needed conduct business. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <div>
+                        <p class="font-semibold text-gray-900 text-lg text-left">William Jack</p>
+                        <p class="text-gray-500 text-sm text-left">Co-Founder</p>
+                    </div>
+                    <img src="image/Mask group.png" alt="William Jack" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
+                </div>
+            </div>
+
+            <div class="w-full sm:w-11/12 md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.33rem)] bg-white p-8 rounded-lg shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[22rem]">
+                <img src="image/“.png" alt="Opening Quote" class="quote-img-open">
+                <div class="flex justify-end mb-4 relative z-10">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6 z-10">It’s an all-in-one solution to that the has turbocharged the growth. The lead generation & capabilities. our partner & result speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <div>
+                        <p class="font-semibold text-gray-900 text-lg text-left">Ruth William</p>
+                        <p class="text-gray-500 text-sm text-left">Web Developer</p>
+                    </div>
+                    <img src="image/Mask group (2).png" alt="Ruth William" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
  
 
 
 
- <section class="bg-white py-16  md:px-0 lg:px-0 mt-10 pt-20 overflow-hidden" >
-  <div class="">
-    <h2 class="text-center text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 text-gray-900">
-      See what our users <br />
-      have to say about it
-    </h2>
 
-    <div class="swiper cardSwiper1 overflow-hidden" style="margin-bottom: 2rem;">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            Great results enjoyable to the works & most importantly enabled us to the presence on the website needed conduct business.
-          </p>
-          <div class="flex items-center">
-            <img src="member1.webp" alt="William Jack" class="w-10 h-10 rounded-full mr-3 ">
-            <div>
-              <p class="font-semibold text-gray-900">William Jack</p>
-              <p class="text-sm text-gray-500">Co-Founder</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            I am a would need more details to a provide relevant informatio business clients' reviews are feedback from in a individuals or companies.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member2.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Businessman</p>
-            </div>
-          </div>
-        </div>
-
-       <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            It s an all-in-one solution to that the has turbocharged the growth.The lead generation & capbilities.our partner & result spesk.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member3.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Web Developer</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            Great results enjoyable to the works & most importantly enabled us to the presence on the website needed conduct business.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member1.webp" alt="William Jack" class="w-10 h-10 rounded-full mr-3 ">
-            <div>
-              <p class="font-semibold text-gray-900">William Jack</p>
-              <p class="text-sm text-gray-500">Co-Founder</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            I am a would need more details to a provide relevant informatio business clients' reviews are feedback from in a individuals or companies.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member2.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Businessman</p>
-            </div>
-          </div>
-        </div>
-
-          <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            It s an all-in-one solution to that the has turbocharged the growth.The lead generation & capbilities.our partner & result spesk.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member3.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Web Developer</p>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="swiper cardSwiper2 overflow-hidden">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            Great results enjoyable to the works & most importantly enabled us to the presence on the website needed conduct business.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member1.webp" alt="William Jack" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">William Jack</p>
-              <p class="text-sm text-gray-500">Co-Founder</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            I am a would need more details to a provide relevant informatio business clients' reviews are feedback from in a individuals or companies.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member2.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Businessman</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            It s an all-in-one solution to that the has turbocharged the growth.The lead generation & capbilities.our partner & result spesk.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member3.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Web Developer</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            Great results enjoyable to the works & most importantly enabled us to the presence on the website needed conduct business.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member1.webp" alt="William Jack" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">William Jack</p>
-              <p class="text-sm text-gray-500">Co-Founder</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            I am a would need more details to a provide relevant informatio business clients' reviews are feedback from in a individuals or companies.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member2.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Businessman</p>
-            </div>
-          </div>
-        </div>
-
-       <div class="swiper-slide flex-none w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.33rem)] bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-          <div class="flex mb-4">
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-            <span class="text-green-500 text-xl">&#9733;</span>
-          </div>
-          <p class="text-gray-700 mb-6">
-            It s an all-in-one solution to that the has turbocharged the growth.The lead generation & capbilities.our partner & result spesk.
-          </p>
-          <div class="flex items-center">
-            <img src="image/member3.png" alt="Smith Align" class="w-10 h-10 rounded-full mr-3 border border-gray-300">
-            <div>
-              <p class="font-semibold text-gray-900">Smith Align</p>
-              <p class="text-sm text-gray-500">Web Developer</p>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section class="flex flex-col items-center text-center py-20 px-4 bg-white relative">
+<section class="flex flex-col items-center text-center py-20 px-4 bg-[#FAFAFA] relative">
   
   <h1 class="text-[30px] sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
-    Driving business growth<br />with a new experience
+    Driving business growth with a <br> new experience
   </h1>
 
 
-  <p class="text-gray-600 text-lg sm:text-[19px] max-w-2xl mb-8">
-    Start tracking your sales pipeline, manage leads, and automate your entire sales process in one place so you can easily focus on selling.
+  <p class="text-gray-600 text-lg sm:text-[19px] max-w-4xl mb-8">
+    Start tracking your sales pipeline, manage leads, and automate your entire sales process in one place so <br> you can easily focus on selling.
   </p>
 
 
-  <button class="bg-purple-300 hover:bg-purple-400 text-black font-semibold py-4 px-8 rounded-full transition-colors">
+  <button class="bg-[#4F6BE9]  text-white font-semibold py-4 px-8 rounded-full transition-colors">
     Create a free account
   </button>
   <p class="mt-2 text-gray-600 text-sm">
@@ -1093,9 +1026,7 @@
   </p>
 
   
-  <div class="absolute bottom-[-40px] right-1/4 transform rotate-6 w-48 h-auto hidden sm:block">
-    <img src="image/shape4.webp" alt="">
-  </div>
+  
 </section>
 
 
@@ -1104,7 +1035,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8  sm:gap-[210px] ">
                 
                 <div>
-                    <img src="image/logo-dark.bc42d68d.svg" alt="Sofax Logo" class="w-auto h-8 mb-4">
+                    <img src="image/Group 65.png" alt="Sofax Logo" class="w-90 h-auto mb-4">
                     <p class="text-gray-700 text-md mb-6">
                         Sofax is best software platform manage your sales depends on your specific business needs budget & industry.
                     </p>
@@ -1197,12 +1128,15 @@
             </div>
 
             
-            <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-center items-center  text-gray-500 text-sm">
+            <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row  items-center  text-gray-500 text-sm">
                 <p> 2024 Mthemeus All Rights Reserved.</p>
                 
             </div>
         </div>
     </footer>
+
+   
+
     
 
     <script>
